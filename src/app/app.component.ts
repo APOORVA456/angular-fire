@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { DataService } from './services/freeApi.service';
 
 @Component({
   selector: 'my-app',
