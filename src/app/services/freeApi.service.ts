@@ -7,12 +7,14 @@ import { Observable, of } from 'rxjs';
 export class DataService {
   constructor(private httpClient: HttpClient) { }
   public getCountries(): Observable<any>{
-    return this.httpClient.get('https://starlord.hackerearth.com/TopRamen', {
+    return this.httpClient.get('http://starlord.hackerearth.com/TopRamen', {
         headers:
           new HttpHeaders(
             {
               'Access-Control-Allow-Origin' : '*',
               'Access-Control-Allow-Credentials': 'true',
+              'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+              'Allow': 'GET, POST, OPTIONS',
               'Content-Type': 'application/json',
               'X-Requested-With': 'XMLHttpRequest',
               'MyClientCert': '',        // This is empty
