@@ -16,7 +16,6 @@ export class CountryComponent implements OnInit {
       {
         this.listdata = data;
       }
-    )
+    );
   }
-
 }
