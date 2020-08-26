@@ -8,14 +8,7 @@ import { Field } from '../classes/fields'
 })
 export class CountryComponent implements OnInit {
   listdata: Field[];
-  constructor(private _freeapi: DataService) {
-    // this._freeapi.getCountries().subscribe(
-    //   data =>
-    //   {
-    //     this.listdata = data;
-    //   }
-    // );
-   }
+  constructor(private _freeapi: DataService){}
 
   ngOnInit() {
     this._freeapi.getCountries().subscribe(
