@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs'
+import { Observable, of } from 'rxjs';
 // import { NgModule } from '@angular/core';
 // import { CommonModule } from '@angular/common';
 
@@ -13,7 +13,8 @@ import { Observable } from 'rxjs'
 @Injectable()
 export class DataService {
   constructor(private httpClient: HttpClient) { }
-getCountries(): Observable<any> {
-    return this.httpClient.get('http://starlord.hackerearth.com/TopRamen')
+  getcountries(): Observable<any> {
+    console.log(this.httpClient.get('http://starlord.hackerearth.com/TopRamen'));
+    return of(this.httpClient.get('http://starlord.hackerearth.com/TopRamen'));
   }
 }

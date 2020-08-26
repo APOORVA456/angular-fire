@@ -11,11 +11,10 @@ export class CountryComponent implements OnInit {
   constructor(private _freeapi = DataService) { }
 
   ngOnInit() {
-    this._freeapi.getCountries()
-    .subscribe(
+    this._freeapi.getcountries().subscribe(
       data =>
       {
-          this.listdata = data;
+        this.listdata = data;
       }
     )
   }
